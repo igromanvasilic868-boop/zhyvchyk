@@ -1,0 +1,161 @@
+<!DOCTYPE html> 
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Перехід у Telegram</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #0f0f2d, #000000);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 400px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      box-shadow: 0 0 25px #00ffcc33;
+    }
+
+    .logo {
+      width: 200px;
+      height: auto;
+      margin-bottom: 30px;
+      border-radius: 30px;
+      box-shadow: 0 0 30px #00ffcc55;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 15px;
+      color: #00ffe7;
+      text-shadow: 0 0 10px #00ffe7, 0 0 20px #00ffe7;
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 30px;
+      color: #ddd;
+    }
+
+    a.button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 15px 30px;
+      font-size: 18px;
+      font-weight: bold;
+      color: white;
+      background: #0088cc;
+      border-radius: 12px;
+      text-decoration: none;
+      box-shadow: 0 0 15px #0088cc, 0 0 30px #0088cc55;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    a.button:hover {
+      background: #00a6ff;
+      transform: scale(1.05);
+    }
+
+    .button img {
+      width: 22px;
+      height: 22px;
+    }
+
+    /* Інформаційний блок зверху */
+    .note {
+      position: fixed;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 400px;
+      background-color: rgba(0, 0, 0, 0.8); /* темний прозорий фон */
+      color: #00ffe7;
+      padding: 14px 20px;
+      border-radius: 16px;
+      font-size: 16px;
+      box-shadow: 0 0 25px #00ffe7cc;
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      font-weight: 600;
+      user-select: none;
+      text-shadow: 0 0 6px #00ffe7;
+      letter-spacing: 0.5px;
+    }
+
+    /* Анімація для стрілки */
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-6px);
+      }
+    }
+
+    .note .close-btn {
+      position: absolute;
+      top: 8px;
+      right: 12px;
+      font-weight: bold;
+      font-size: 28px;
+      color: #00ffe7;
+      cursor: pointer;
+      user-select: none;
+      animation: bounce 2s infinite;
+      transition: color 0.3s, transform 0.3s;
+      text-shadow: 0 0 8px #00ffe7;
+    }
+
+    .note .close-btn:hover {
+      color: #00ccbe;
+      animation-play-state: paused;
+      transform: scale(1.4);
+      text-shadow: 0 0 12px #00ccbe;
+    }
+  </style>
+</head>
+<body>
+  <!-- Інформаційний блок зверху -->
+  <div class="note" id="note">
+    Якщо посилання не відкривається, скопіюй його в браузер і відкрий вручну
+    <div class="close-btn" id="closeBtn">&#8593;</div>
+  </div>
+
+  <div class="container">
+    <img src="https://uploads.onecompiler.io/43xaun5uc/43xatu42y/photo_2025-09-20_22-41-10.jpg" alt="Лого" class="logo" />
+
+    <h1>🔥 Приєднуйся до нашого Telegram каналу!</h1>
+    <p>Отримуй найактуальніші оновлення та корисну інформацію на тему P2P арбітражу</p>
+
+    <a class="button" href="https://t.me/+lEDQMemlEsQ1ZGUy" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram" />
+      Перейти у Telegram
+    </a>
+  </div>
+
+  <script>
+    const closeBtn = document.getElementById('closeBtn');
+    const note = document.getElementById('note');
+
+    closeBtn.addEventListener('click', () => {
+      note.style.display = 'none';
+    });
+  </script>
+</body>
+</html>
